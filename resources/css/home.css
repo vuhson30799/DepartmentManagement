@@ -1,0 +1,45 @@
+body{
+    display:grid;
+    justify-content:center;
+    align-content:center;
+}
+
+img.fx {
+    display:block;
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+.wrap {
+    animation:f 20s infinite;
+}
+
+@keyframes f {
+    /*
+             +-----A
+             .     .
+             B-----+
+
+    transit 1,2,3,4 to A
+    transit 5,6,7,8 to B
+    */
+    /*
+         2   +-----+ 3
+         1,5 .     . 4,8
+         6   +-----+ 7
+
+    1>2>3>4=cw
+    5>6>7>8=ccw
+    */
+    from {
+        clip-path:polygon(
+                100% 0,100% 0,100% 0,100% 0,/*1,2,3,4*/
+                0 100%,0 100%,0 100%,0 100%);/*5,6,7,8*/
+    }
+    50%, to {
+        clip-path:polygon(
+                0 50%,0 0,100% 0,100% 50%,/*1,2,3,4*/
+                0 50%,0 100%,100% 100%,100% 50%);/*5,6,7,8*/
+    }
+}

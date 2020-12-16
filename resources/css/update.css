@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50%;
+}
+
+.message-success {
+    color: #f1f1f1;
+    background-color: #4CAF50;
+}

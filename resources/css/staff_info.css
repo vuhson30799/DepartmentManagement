@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.staff_info table {
+    width: 80%;
+}
+.staff_info td, .staff_info th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.staff_info tr:nth-child(even){background-color: #f2f2f2;}
+
+.staff_info tr:hover {background-color: #ddd;}
+
+.staff_info th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #3b6eff;
+    color: white;
+}
+
+.search-result {
+    margin: 5px 0 5px 0;
+}
